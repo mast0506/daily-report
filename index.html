@@ -3,124 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日深度简报 - 2026年3月21日</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>每日深度简报 | 2026年3月22日</title>
     <style>
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-blue: #3b82f6;
-            --accent-green: #10b981;
-            --accent-red: #ef4444;
-            --accent-amber: #f59e0b;
-            --accent-purple: #8b5cf6;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e4e4e4;
             line-height: 1.6;
+            min-height: 100vh;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 40px 20px;
             text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
             border-radius: 16px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
-        header .date { font-size: 1.2rem; opacity: 0.9; }
+        header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        .date {
+            font-size: 1.2em;
+            color: #a0a0a0;
+        }
+        .tagline {
+            margin-top: 15px;
+            color: #888;
+            font-style: italic;
+        }
         .section {
-            background: var(--bg-secondary);
+            background: rgba(255,255,255,0.05);
             border-radius: 16px;
             padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
         }
         .section-header {
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 2px solid var(--bg-card);
+            border-bottom: 2px solid rgba(233, 69, 96, 0.5);
         }
-        .section-icon { font-size: 2rem; margin-right: 15px; }
-        .section-title { font-size: 1.8rem; font-weight: 700; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
+        .section-icon {
+            font-size: 2em;
+            margin-right: 15px;
         }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
-        .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: var(--accent-blue); }
-        .metric { display: flex; justify-content: space-between; align-items: center; margin: 8px 0; }
-        .metric-value { font-size: 1.5rem; font-weight: 700; }
-        .metric-label { color: var(--text-secondary); font-size: 0.9rem; }
-        .positive { color: var(--accent-green); }
-        .negative { color: var(--accent-red); }
-        .neutral { color: var(--accent-amber); }
-        .news-item {
-            background: var(--bg-card);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 12px;
-            border-left: 4px solid var(--accent-blue);
+        .section h2 {
+            font-size: 1.8em;
+            color: #fff;
         }
-        .news-title { font-weight: 600; margin-bottom: 8px; }
-        .news-source { font-size: 0.85rem; color: var(--text-secondary); }
-        .highlight-box {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
-            border-radius: 12px;
-            padding: 20px;
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             margin: 20px 0;
         }
-        .highlight-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--bg-card);
-        }
-        th { background: var(--bg-card); font-weight: 600; }
-        .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-right: 8px;
-        }
-        .tag-hot { background: rgba(239, 68, 68, 0.2); color: var(--accent-red); }
-        .tag-up { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-        .tag-news { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); }
-        .analysis-box {
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid var(--accent-purple);
-            border-radius: 12px;
+        .data-card {
+            background: rgba(0,0,0,0.2);
             padding: 20px;
-            margin-top: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
         }
-        .analysis-title { color: var(--accent-purple); font-weight: 600; margin-bottom: 10px; }
+        .data-card .label {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .data-card .value {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #e94560;
+        }
+        .data-card .change {
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+        .change.up { color: #4ade80; }
+        .change.down { color: #f87171; }
+        .analysis {
+            background: rgba(15, 52, 96, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border-left: 4px solid #e94560;
+        }
+        .analysis h3 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        .analysis p {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        .investment-view {
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(34, 197, 94, 0.05));
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        .investment-view h3 {
+            color: #4ade80;
+            margin-bottom: 10px;
+        }
+        .news-list {
+            list-style: none;
+        }
+        .news-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+        .news-list li::before {
+            content: "▸";
+            color: #e94560;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .news-list li:last-child {
+            border-bottom: none;
+        }
+        .highlight {
+            background: rgba(233, 69, 96, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #ff6b6b;
+        }
         footer {
             text-align: center;
             padding: 30px;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--bg-card);
-            margin-top: 40px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            margin-left: 10px;
+        }
+        .badge-hot { background: #e94560; color: white; }
+        .badge-new { background: #4ade80; color: #1a1a2e; }
+        .badge-warn { background: #fbbf24; color: #1a1a2e; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .section { padding: 20px; }
+            .data-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -128,329 +181,187 @@
     <div class="container">
         <header>
             <h1>📊 每日深度简报</h1>
-            <div class="date">2026年3月21日 星期六 | 新加坡时间 07:30</div>
+            <div class="date">2026年3月22日 · 星期日</div>
+            <div class="tagline">全球航运 · 财经市场 · 国际时政 · AI前沿</div>
         </header>
 
         <!-- 航运板块 -->
-        <div class="section">
+        <section class="section">
             <div class="section-header">
                 <span class="section-icon">🚢</span>
-                <h2 class="section-title">航运板块</h2>
+                <h2>航运板块 <span class="badge badge-hot">地缘冲突影响</span></h2>
             </div>
             
-            <div class="grid">
-                <div class="card">
-                    <div class="card-title">波罗的海指数</div>
-                    <div class="metric">
-                        <span class="metric-label">BDI (干散货)</span>
-                        <span class="metric-value neutral">2,842</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">BDTI (油轮)</span>
-                        <span class="metric-value neutral">2,743</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">变动</span>
-                        <span class="tag tag-up">日更新</span>
-                    </div>
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="label">波罗的海干散货指数 (BDI)</div>
+                    <div class="value">2,140</div>
+                    <div class="change up">+23点 (+1.09%)</div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-title">集装箱运价指数</div>
-                    <div class="metric">
-                        <span class="metric-label">Drewry WCI</span>
-                        <span class="metric-value positive">$2,172/FEU</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">周变动</span>
-                        <span class="metric-value positive">+2%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">趋势</span>
-                        <span class="tag tag-up">连续3周上涨</span>
-                    </div>
+                <div class="data-card">
+                    <div class="label">上海出口集装箱运价 (SCFI)</div>
+                    <div class="value">三连涨</div>
+                    <div class="change up">终止六连跌反弹</div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-title">上海出口集装箱运价</div>
-                    <div class="metric">
-                        <span class="metric-label">SCFI</span>
-                        <span class="metric-value positive">飙升+15%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">航线</span>
-                        <span class="metric-label">亚洲-美国</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">NYFI</span>
-                        <span class="metric-value neutral">小幅走高</span>
-                    </div>
+                <div class="data-card">
+                    <div class="label">Drewry WCI指数</div>
+                    <div class="value">$1,899/FEU</div>
+                    <div class="change down">-1% (连续7周下跌)</div>
+                </div>
+                <div class="data-card">
+                    <div class="label">布伦特原油</div>
+                    <div class="value">$107-112</div>
+                    <div class="change up">创2022年7月来最高</div>
                 </div>
             </div>
 
-            <div class="highlight-box">
-                <div class="highlight-title">⚠️ 红海危机持续影响</div>
-                <p>2026年集装箱航运成本因红海危机持续、航线改道、港口拥堵及地缘政治压力而攀升。承运商正在提高基本运费并增加附加费，空白航次、港口拥堵和安全风险推动即期运价和合同运价同步上涨。</p>
+            <div class="analysis">
+                <h3>🔍 市场分析</h3>
+                <p>• <strong>干散货市场：</strong>BDI指数近期在2100-2200区间波动，环比小幅上涨。Drewry分析指出，在经历2025年地缘政治冲突频发后，全球干散货市场有望在2026年迎来相对平稳的运行环境。</p>
+                <p>• <strong>集装箱航运：</strong>SCFI指数终止六连跌开始反弹，但WCI指数连续第七周下跌，主要由跨太平洋和亚欧两大主干航线运价下行所驱动。</p>
+                <p>• <strong>地缘影响：</strong>中东局势升级导致霍尔木兹海峡航运风险上升，布伦特原油飙升至$112/桶，能源价格上涨对航运成本形成支撑。</p>
             </div>
 
-            <div class="news-item">
-                <div class="news-title">🚨 印度贸易遭受重创：4-4.5万个出口集装箱受阻</div>
-                <p>航运成本一周内飙升数倍，影响约4-4.5万个印度出口集装箱，价值约10-15亿美元。海湾地区航运混乱直接冲击印度贸易动脉。</p>
-                <span class="news-source">来源：The Economic Times | 2天前</span>
+            <div class="investment-view">
+                <h3>💡 投资观点</h3>
+                <p>短期关注中东局势对油运和LNG运输的提振作用。干散货市场供需基本面趋于平衡，建议关注具备长期租约锁定收益的航运公司。集装箱航运市场仍面临运力过剩压力，谨慎对待班轮公司短期反弹。</p>
             </div>
-
-            <div class="news-item">
-                <div class="news-title">🚢 新造船订单：Euroseas合作黄海造船</div>
-                <p>新造船项目 vessels 计划于2028年6月和8月交付，单价4635万美元。集装箱船新造市场保持活跃。</p>
-                <span class="news-source">来源：Seatrade Maritime | 1天前</span>
-            </div>
-
-            <div class="analysis-box">
-                <div class="analysis-title">📈 航运分析与投资机会</div>
-                <p><strong>短期展望：</strong>红海航线持续中断支撑运价维持高位，跨太平洋航线运价连续上涨。建议关注集装箱航运股（如中远海控、马士基）及油轮股的投资机会。</p>
-                <p><strong>风险提示：</strong>若中东局势缓和，运价可能快速回调；燃油附加费上升可能抑制贸易需求。</p>
-            </div>
-        </div>
+        </section>
 
         <!-- 财经板块 -->
-        <div class="section">
+        <section class="section">
             <div class="section-header">
                 <span class="section-icon">📈</span>
-                <h2 class="section-title">财经板块</h2>
+                <h2>财经板块 <span class="badge badge-warn">超级央行周</span></h2>
             </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card-title">美股收盘 (3月20日)</div>
-                    <div class="metric">
-                        <span class="metric-label">道琼斯</span>
-                        <span class="metric-value negative">45,577 ▼0.96%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">标普500</span>
-                        <span class="metric-value negative">6,506 ▼1.51%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">纳斯达克</span>
-                        <span class="metric-value negative">21,648 ▼2.01%</span>
-                    </div>
+            
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="label">标普500指数</div>
+                    <div class="value">6,878</div>
+                    <div class="change down">-0.43%</div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-title">大宗商品</div>
-                    <div class="metric">
-                        <span class="metric-label">黄金</span>
-                        <span class="metric-value neutral">$4,715 ▼2.15%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">WTI原油</span>
-                        <span class="metric-value negative">$96.89 ▼2.68%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">布伦特原油</span>
-                        <span class="metric-value neutral">~$100</span>
-                    </div>
+                <div class="data-card">
+                    <div class="label">纳斯达克指数</div>
+                    <div class="value">22,668</div>
+                    <div class="change down">-0.92%</div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-title">加密货币</div>
-                    <div class="metric">
-                        <span class="metric-label">比特币</span>
-                        <span class="metric-value positive">$71,000 +1.52%</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">以太坊</span>
-                        <span class="metric-value neutral">$2,122</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-label">市场情绪</span>
-                        <span class="tag tag-hot">极度恐慌(11)</span>
-                    </div>
+                <div class="data-card">
+                    <div class="label">道琼斯指数</div>
+                    <div class="value">~41,500</div>
+                    <div class="change down">-0.94%</div>
+                </div>
+                <div class="data-card">
+                    <div class="label">比特币 (BTC)</div>
+                    <div class="value">$70,000-71,000</div>
+                    <div class="change down">-3-5%</div>
+                </div>
+                <div class="data-card">
+                    <div class="label">以太坊 (ETH)</div>
+                    <div class="value">$2,130-2,150</div>
+                    <div class="change down">-0.8%</div>
+                </div>
+                <div class="data-card">
+                    <div class="label">COMEX黄金</div>
+                    <div class="value">~$3,000</div>
+                    <div class="change up">2025年涨幅55%</div>
                 </div>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>科技股</th>
-                        <th>价格表现</th>
-                        <th>年初至今</th>
-                        <th>重要动态</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>NVIDIA (NVDA)</td>
-                        <td class="negative">回调中</td>
-                        <td class="neutral">高波动</td>
-                        <td>GTC大会结束，CEO确认中国订单</td>
-                    </tr>
-                    <tr>
-                        <td>微软 (MSFT)</td>
-                        <td class="negative">下跌</td>
-                        <td class="negative">-20%</td>
-                        <td>地缘不确定性拖累</td>
-                    </tr>
-                    <tr>
-                        <td>特斯拉 (TSLA)</td>
-                        <td class="negative">下跌</td>
-                        <td class="negative">-15%</td>
-                        <td>Model 3 Premium续航363英里</td>
-                    </tr>
-                    <tr>
-                        <td>Meta (META)</td>
-                        <td class="negative">-8%</td>
-                        <td class="neutral">基本面强劲</td>
-                        <td>VIX处于91百分位</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="news-item">
-                <div class="news-title">🏦 美联储维持利率不变</div>
-                <p>美联储连续第二次维持利率不变，基准利率维持在3.5%-3.75%区间。预计2026年仅降息一次，主要担忧伊朗战争将恶化通胀。鲍威尔表示目前判断冲突对经济影响为时过早。</p>
-                <span class="news-source">来源：AP News, NYT | 1-2天前</span>
+            <div class="analysis">
+                <h3>🔍 市场分析</h3>
+                <p>• <strong>美联储动向：</strong>3月FOMC会议维持利率3.5%-3.75%不变，点阵图显示2026年和2027年利率预期中值维持在3.4%和3.1%。但点阵图更偏鹰派，认为2026年降息2次或更多的票委人数由8人降至5人。</p>
+                <p>• <strong>欧洲央行：</strong>维持三大关键利率不变（存款机制利率2%、主要再融资利率2.15%、边际贷款利率2.40%），上调2026-2028年通胀预测至2.6%、2.0%和2.1%，下调经济增长预期。</p>
+                <p>• <strong>科技股：</strong>七巨头（M7）近期波动加剧，英伟达绩后连续走弱。谷歌市值一度超越苹果达3.89万亿美元。2026年科技巨头资本开支预计达6000亿美元，同比增长28.9%。</p>
+                <p>• <strong>加密货币：</strong>BTC测试$71,100支撑位，FOMC后单日机构减仓$708 million ETF资金。地缘避险需求与流动性收紧形成拉锯。</p>
             </div>
 
-            <div class="analysis-box">
-                <div class="analysis-title">💡 财经分析与配置建议</div>
-                <p><strong>宏观环境：</strong>中东局势紧张推高油价至100美元附近，叠加美联储鹰派立场，风险资产承压。市场已消化2026年不降息预期。</p>
-                <p><strong>配置建议：</strong>防御性配置为主，关注黄金回调后的买入机会；科技股中NVIDIA估值相对合理(23x前瞻P/E)，但需等待情绪回暖。</p>
+            <div class="investment-view">
+                <h3>💡 投资观点</h3>
+                <p>美联储鹰派立场超预期，短期风险资产承压。建议关注防御性板块（公用事业、能源）和受益于高利率的金融股。科技股分化加剧，优选具备清晰AI商业化路径的标的。黄金作为地缘对冲工具仍具配置价值，比特币短期震荡为主。</p>
             </div>
-        </div>
+        </section>
 
         <!-- 时政板块 -->
-        <div class="section">
+        <section class="section">
             <div class="section-header">
                 <span class="section-icon">📰</span>
-                <h2 class="section-title">时政板块</h2>
+                <h2>时政板块 <span class="badge badge-hot">中东战争第20天</span></h2>
+            </div>
+            
+            <ul class="news-list">
+                <li><strong>中东局势：</strong>美以对伊朗军事行动进入第20天，联合国秘书长古特雷斯敦促立即停止战争，警告局势"可能完全失控"。伊朗最高领袖哈梅内伊遇害后，真主党向以色列发射导弹报复。</li>
+                <li><strong>中国斡旋：</strong>王毅外长密集同俄罗斯、伊朗、阿曼、法国、以色列、沙特等国外长通话，强调遵守联合国宪章，反对动辄使用武力，呼吁立即停止军事行动重回对话。</li>
+                <li><strong>欧洲态度：</strong>欧洲领导人对帮助特朗普确保霍尔木兹海峡安全犹豫不决，但清楚不作为并非真正选择。瑞士暂时关闭驻伊朗大使馆。</li>
+                <li><strong>俄罗斯立场：</strong>俄外交部对联合国安理会涉伊决议表示"强烈不满"，认为未提及美以对伊朗的袭击，称当前危机根源在于美以对伊朗的"无端侵略"。</li>
+                <li><strong>东南亚影响：</strong>东南亚各国极度依赖中东石油与天然气，战争带来沉重冲击，多国已采取严厉紧缩措施减轻经济冲击。</li>
+                <li><strong>全球经济：</strong>IMF预测2026年全球经济增速3.1%，低于2025年3.2%。贸易政策不确定性和地缘政治紧张构成主要下行风险。</li>
+            </ul>
+
+            <div class="analysis">
+                <h3>🔍 地缘政治分析</h3>
+                <p>当前中东战场呈现三条战线：美以对伊朗直接战线、黎巴嫩真主党对以色列牵制、伊拉克库尔德地区什叶派武装冲突。霍尔木兹海峡若长期关闭将给全球能源供应带来灾难性后果，对最不发达国家产生潜在灾难性冲击。中国在该区域的外交影响力面临考验，同时这场冲突也成为北京观察特朗普在其他地区（包括台湾问题）反应的窗口。</p>
             </div>
 
-            <div class="highlight-box">
-                <div class="highlight-title">🔥 头条：中东局势</div>
-                <p><strong>特朗普考虑"逐步结束"伊朗战争</strong> — 特朗普在Truth Social发文称"我们正在接近实现目标，考虑逐步减少在中东针对伊朗恐怖政权的军事行动"。但与此同时，更多海军陆战队正前往中东，政府已宣布战时紧急状态绕过国会推动超过230亿美元的中东军售。</p>
+            <div class="investment-view">
+                <h3>💡 投资策略建议</h3>
+                <p>中东局势升级推动能源和黄金价格上涨，建议超配能源股和贵金属。关注军工板块的地缘冲突溢价。霍尔木兹海峡若关闭将重创全球供应链，可配置航运保险、替代能源等相关标的。避险资产（美债、日元、瑞郎）需求上升。</p>
             </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card-title">🇺🇸 美国动态</div>
-                    <p>• 美以正试图用武力阻止伊朗扰乱霍尔木兹海峡航运</p>
-                    <p>• 特朗普确认已告知内塔尼亚胡停止攻击伊朗能源设施</p>
-                    <p>• 内塔尼亚胡称伊朗已"无法浓缩铀和制造弹道导弹"</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title">🇨🇳 中国动态</div>
-                    <p>• 菲律宾军方指控中国海军3月7日在南海用火控雷达照射菲方船只</p>
-                    <p>• 德国总理Friedrich Merz访问杭州宇树科技参观人形机器人</p>
-                    <p>• 欧洲因美国关税开始调整对华强硬立场</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-title">🇪🇺 欧洲局势</div>
-                    <p>• 特朗普关税政策下，欧洲正与中国"搭桥"</p>
-                    <p>• 对欧洲官员而言，对华强硬立场越来越难以接受</p>
-                    <p>• 欧洲正重新审视"去风险"战略</p>
-                </div>
-            </div>
-
-            <div class="news-item">
-                <div class="news-title">⚠️ 伊朗局势升级</div>
-                <p>伊朗以导弹和无人机回应美以打击，目标包括以色列及美军在中东的军事基地。战争已造成大规模人员伤亡，地区局势高度紧张。</p>
-                <span class="news-source">来源：Al Jazeera, The Guardian | 1天前</span>
-            </div>
-
-            <div class="analysis-box">
-                <div class="analysis-title">🌐 地缘政治分析</div>
-                <p><strong>能源风险：</strong>霍尔木兹海峡是全球20%石油运输的咽喉要道，若伊朗封锁将引发油价暴涨。当前美以军事干预意在确保航道安全。</p>
-                <p><strong>中美欧博弈：</strong>美国关税政策正促使欧洲重新平衡对华关系，可能加速全球贸易格局重组。科技领域AI芯片出口管制成为新战场。</p>
-            </div>
-        </div>
+        </section>
 
         <!-- AI/机器人板块 -->
-        <div class="section">
+        <section class="section">
             <div class="section-header">
                 <span class="section-icon">🤖</span>
-                <h2 class="section-title">AI与机器人板块</h2>
+                <h2>AI/机器人板块 <span class="badge badge-new">商业化元年</span></h2>
             </div>
-
-            <div class="highlight-box">
-                <div class="highlight-title">🚨 重磅：Super Micro芯片走私案</div>
-                <p>Super Micro Computer联合创始人及其他两人被指控向非法向中国转移价值<strong>25亿美元</strong>的NVIDIA AI芯片服务器，违反出口管制法规。另有两人因非法走私受限制AI芯片被捕。此案凸显中美AI芯片竞争白热化。</p>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card-title">🏢 硅谷前沿</div>
-                    <p>• NVIDIA CEO黄仁勋确认已接到中国市场芯片订单，正在启动供应链</p>
-                    <p>• AMD与三星电子签署谅解备忘录扩大存储芯片战略合作</p>
-                    <p>• 特朗普政府发布AI政策框架，呼吁国会立法优先于州法规</p>
+            
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="label">OpenAI融资额</div>
+                    <div class="value">$110B</div>
+                    <div class="change up">创历史纪录</div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-title">🤖 人形机器人进展</div>
-                    <p>• <strong>Tesla Optimus Gen 3</strong>: 每只手50个执行器，德州工厂已开始试产，目标2026年4月量产</p>
-                    <p>• 特斯拉称其为"世界上最先进的机器人"</p>
-                    <p>• 德国总理参观宇树科技人形机器人展示</p>
+                <div class="data-card">
+                    <div class="label">科技巨头2026资本开支</div>
+                    <div class="value">$6000B</div>
+                    <div class="change up">同比+28.9%</div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-title">⚖️ 政策与监管</div>
-                    <p>• HB 2321法案：AI生成内容责任与隐私保护法案</p>
-                    <p>• 五角大楼拟弃用Anthropic Claude，军方用户表示难以替换</p>
-                    <p>• 俄罗斯拟立法禁止或限制外国AI工具</p>
+                <div class="data-card">
+                    <div class="label">银河通用机器人估值</div>
+                    <div class="value">200亿元</div>
+                    <div class="change up">单轮融资25亿元</div>
+                </div>
+                <div class="data-card">
+                    <div class="label">NVIDIA GTC大会</div>
+                    <div class="value">3月16-19日</div>
+                    <div class="change up">AI多模态大年</div>
                 </div>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>AI模型</th>
-                        <th>版本/特性</th>
-                        <th>动态</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>OpenAI GPT</td>
-                        <td>GPT-4系列</td>
-                        <td>持续优化API服务</td>
-                    </tr>
-                    <tr>
-                        <td>Anthropic Claude</td>
-                        <td>3.5 Sonnet</td>
-                        <td>面临五角大楼弃用压力</td>
-                    </tr>
-                    <tr>
-                        <td>Google Gemini</td>
-                        <td>3.1 Pro</td>
-                        <td>100万token上下文窗口，ARC-AGI-2达77.1%</td>
-                    </tr>
-                    <tr>
-                        <td>xAI Grok</td>
-                        <td>与X平台整合</td>
-                        <td>API定价竞争激烈</td>
-                    </tr>
-                </tbody>
-            </table>
+            <ul class="news-list">
+                <li><strong>OpenAI动态：</strong>计划将Sora视频生成模型直接集成到ChatGPT中；与五角大楼达成协议允许AI模型用于国防机密网络；完成1100亿美元创纪录融资。</li>
+                <li><strong>硅谷巨头：</strong>微软2026财年资本支出预计1000亿美元；亚马逊计划投入2000亿美元；谷歌投入1750-1850亿美元加速TPU集群；Meta资本支出1150-1350亿美元。</li>
+                <li><strong>中国AI：</strong>阿里通义千问推进"模型即产品"一体化发展；智元机器人发布新模型；银河通用机器人估值突破200亿元刷新具身智能领域纪录。</li>
+                <li><strong>产业趋势：</strong>2026年被定义为AI应用"黄金元年"和"商业化大年"，多模态Agent成为主要方向，AI算力重心从云端转向边缘。</li>
+                <li><strong>投资热度：</strong>私募大佬葛卫东密集投资GPU和机器人行业；港股AI、半导体、机器人上市公司推动市场向"硬科技融资高地"演进。</li>
+            </ul>
 
-            <div class="news-item">
-                <div class="news-title">💻 Google为Mac开发原生Gemini应用</div>
-                <p>Google正开发Mac原生Gemini应用以与ChatGPT和Claude竞争。目前Mac用户需通过浏览器使用Gemini，而Anthropic和OpenAI已推出原生Mac应用。</p>
-                <span class="news-source">来源：MacRumors | 1天前</span>
+            <div class="analysis">
+                <h3>🔍 行业分析</h3>
+                <p>2026年是AI从"可用"到"好用"的关键转折点。顶级模型公司（OpenAI、Google、Anthropic）战略分化加剧，算力基建（GPU与TPU）阵营对抗升级。具身智能成为新爆发点，人形机器人技术成熟度快速提升但成本控制仍是挑战。AI应用商业模式从To B向To C扩展，情感陪护机器人、智能办公设备等硬件产品不断涌现。</p>
             </div>
 
-            <div class="analysis-box">
-                <div class="analysis-title">🔮 AI趋势深度分析</div>
-                <p><strong>芯片战争：</strong>25亿美元走私案表明美国AI芯片出口管制正遭遇现实挑战。特朗普政府已在考虑放宽低端芯片出口以换取15%佣金，显示政策可能出现松动。</p>
-                <p><strong>机器人突破：</strong>Optimus Gen 3的50执行器手部标志着灵巧操作能力质的飞跃，人形机器人正从实验室走向量产。建议关注Tesla供应链及工业机器人板块。</p>
-                <p><strong>模型竞争：</strong>Gemini 3.1 Pro的77.1% ARC-AGI-2得分显示推理能力持续突破，多模态上下文窗口竞争成为新焦点。</p>
+            <div class="investment-view">
+                <h3>💡 投资观点</h3>
+                <p>AI板块仍是2026年最确定性赛道。上游算力（GPU、光模块、硅光技术）需求刚性；中游模型层关注具备差异化能力和清晰变现路径的标的；下游应用层重点关注AI Agent、具身智能、AI+医疗/教育/办公等场景。港股硬科技板块有望形成"AI权重超20%"的新格局，但需警惕商业化兑现不及预期的估值回调风险。</p>
             </div>
-        </div>
+        </section>
 
         <footer>
-            <p>📊 每日深度简报由 AI 自动生成 | 资讯仅供参考，不构成投资建议</p>
-            <p>Generated on 2026-03-21 | Data sources: Bloomberg, Reuters, CNBC, NYT, AP, Al Jazeera</p>
+            <p>📡 数据来源：Brave Search、Investing.com、CoinDesk、新浪财经、BBC News、联合国新闻等</p>
+            <p>⚠️ 免责声明：本简报仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
+            <p style="margin-top: 15px; color: #e94560;">Generated by OpenClaw · 2026年3月22日</p>
         </footer>
     </div>
 </body>
