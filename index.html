@@ -32,511 +32,285 @@
       padding: 40px 0 30px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2rem;
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+    header .date { color: var(--accent); font-size: 1.1rem; font-weight: 500; }
+    header .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-top: 6px; }
+    .section { margin: 30px 0; }
+    .section-title {
+      font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
-    header .date {
-      color: var(--accent);
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-    header .subtitle {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-top: 6px;
-    }
-    .section {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      margin: 24px 0;
-      overflow: hidden;
-    }
-    .section-header {
-      background: var(--bg-card);
-      padding: 16px 24px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .section-header h2 { font-size: 1.25rem; font-weight: 600; }
-    .section-body { padding: 24px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 24px;
+      padding: 12px 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 20px;
     }
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
     }
-    .card-label {
-      color: var(--text-secondary);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-    .card-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .card-delta {
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
+    .card p, .card li { color: var(--text-secondary); font-size: 0.95rem; }
+    .card ul { padding-left: 20px; }
+    .card li { margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    th { color: var(--text-secondary); font-weight: 600; background: var(--bg-secondary); }
     .up { color: var(--accent-green); }
     .down { color: var(--accent-red); }
-    .neutral { color: var(--text-secondary); }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-    th, td {
-      padding: 10px 12px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    th {
-      color: var(--text-secondary);
-      font-weight: 500;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    td { color: var(--text-primary); }
-    tr:hover td { background: var(--bg-card); }
-    .news-list { list-style: none; }
-    .news-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-    .news-list li:last-child { border-bottom: none; }
-    .news-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-      margin-top: 8px;
-    }
-    .news-text { flex: 1; }
-    .news-text strong { color: var(--accent); }
-    .analysis-box {
-      background: var(--bg-card);
-      border-left: 3px solid var(--accent-orange);
-      padding: 14px 18px;
-      border-radius: 0 8px 8px 0;
-      margin-top: 20px;
-    }
-    .analysis-box h4 {
-      color: var(--accent-orange);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
+    .warn { color: var(--accent-orange); }
     .tag {
       display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 500;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 0.8rem;
       margin-right: 6px;
+      color: var(--accent);
     }
-    .tag-green { background: rgba(63,185,80,0.15); color: var(--accent-green); }
-    .tag-red { background: rgba(248,81,73,0.15); color: var(--accent-red); }
-    .tag-blue { background: rgba(88,166,255,0.15); color: var(--accent); }
-    .tag-purple { background: rgba(163,113,247,0.15); color: var(--accent-purple); }
+    .highlight-box {
+      background: linear-gradient(135deg, #1a1e2e, #21262d);
+      border-left: 4px solid var(--accent-red);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .highlight-box h4 { color: var(--accent-red); margin-bottom: 8px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
     footer {
       text-align: center;
       padding: 30px 0;
       color: var(--text-secondary);
       font-size: 0.8rem;
       border-top: 1px solid var(--border);
-      margin-top: 20px;
+      margin-top: 40px;
     }
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
-      .cards { grid-template-columns: 1fr; }
-      table { font-size: 0.8rem; }
-      th, td { padding: 8px 6px; }
+    .index-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border-radius: 6px;
+      margin-bottom: 8px;
     }
+    .index-card .name { font-weight: 600; }
+    .index-card .value { font-size: 1.1rem; font-weight: 700; }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>📰 每日深度简报</h1>
+      <h1>📊 每日深度简报</h1>
       <div class="date">2026年4月21日 · 星期二</div>
-      <div class="subtitle">航运 · 财经 · 时政 · AI与机器人 · 全维度分析</div>
+      <div class="subtitle">航运 · 财经 · 时政 · AI/机器人 — 全维度分析</div>
     </div>
   </header>
 
   <div class="container">
 
-    <!-- ==================== SHIPPING ==================== -->
+    <!-- 重大事件警报 -->
     <div class="section">
-      <div class="section-header">
-        <span style="font-size:1.4rem;">🚢</span>
-        <h2>航运板块</h2>
-      </div>
-      <div class="section-body">
-        <div class="cards">
-          <div class="card">
-            <div class="card-label">BDI 波罗的海干散货指数</div>
-            <div class="card-value">2,484</div>
-            <div class="card-delta up">▲ +130 (+5.5%) · 创年内新高</div>
-          </div>
-          <div class="card">
-            <div class="card-label">BCI 好望角型指数</div>
-            <div class="card-value">3,964</div>
-            <div class="card-delta up">▲ +293 (+8.0%)</div>
-          </div>
-          <div class="card">
-            <div class="card-label">WCI 世界集装箱指数</div>
-            <div class="card-value">$2,246</div>
-            <div class="card-delta down">▼ -3% · 六周涨势终结</div>
-          </div>
-          <div class="card">
-            <div class="card-label">好望角型日租金</div>
-            <div class="card-value">$32,450</div>
-            <div class="card-delta up">▲ +$2,658/天</div>
-          </div>
-        </div>
-
-        <table>
-          <tr>
-            <th>航线/指标</th>
-            <th>数值</th>
-            <th>变动</th>
-            <th>备注</th>
-          </tr>
-          <tr>
-            <td>BDI (波罗的海干散货指数)</td>
-            <td>2,484 pts</td>
-            <td class="up">+130 (+5.5%)</td>
-            <td>年内最高位，连续第三日上涨</td>
-          </tr>
-          <tr>
-            <td>BCI (好望角型)</td>
-            <td>3,964 pts</td>
-            <td class="up">+293</td>
-            <td>即期租金跳涨至 $32,450/天</td>
-          </tr>
-          <tr>
-            <td>WCI (Drewry 集装箱指数)</td>
-            <td>$2,246 / 40ft</td>
-            <td class="down">-3%</td>
-            <td>六周连涨终结，中东冲突溢价消退</td>
-          </tr>
-          <tr>
-            <td>上海 → 纽约</td>
-            <td>$3,552 / 40ft</td>
-            <td class="down">-3%</td>
-            <td>跨太平洋航线回调</td>
-          </tr>
-          <tr>
-            <td>上海 → 洛杉矶</td>
-            <td>$2,810 / 40ft</td>
-            <td class="down">-3%</td>
-            <td>美西航线同步回落</td>
-          </tr>
-          <tr>
-            <td>Containerized Freight Index</td>
-            <td>~1,267 pts</td>
-            <td class="down">-33% YoY</td>
-            <td>同比仍处低位</td>
-          </tr>
-        </table>
-
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>干散货强势反弹：</strong>BDI 升至 2,484 点创年内新高，好望角型船租金跳涨 $2,658/天至 $32,450，铁矿砂及煤炭需求回暖为主要推手。巴拿马型、超灵便型船同步跟进。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>集运涨势熄火：</strong>受燃料成本回落及中东局势暂缓影响，Drewry WCI 终结六周连涨，亚欧及跨太平洋即期运价双双下滑 3%。市场担忧旺季前运力过剩。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>燃油附加费加速：</strong>全球船公司加速征收燃油附加费，澳大利亚/新西兰航线相对稳定，但主要中转港拥堵加剧，船期可靠性下降。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>美国海关合规变动：</strong>4月起美国海关对进口商品合规要求收紧，叠加 IATA 危险品数字化预审新规，货代操作成本上升。</div></li>
-        </ul>
-
-        <div class="analysis-box">
-          <h4>📊 分析与机会</h4>
-          <p>干散货与集运呈现<strong>剪刀差</strong>：干散货受中国基建及补库存拉动持续走强，而集运在红海绕航常态化后逐渐消化溢价。建议关注 BDI 能否站稳 2,500 点关口；若集运运价继续下探，Q3 旺季前可能出现布局窗口。油运方面，霍尔木兹海峡局势反复，VLCC 租金波动风险加大。</p>
-        </div>
+      <div class="highlight-box">
+        <h4>🚨 重大地缘事件：霍尔木兹海峡危机升级</h4>
+        <p style="color: var(--text-primary);">美国于4月12日宣布对伊朗实施海上封锁，伊朗随后于4月18日全面关闭霍尔木兹海峡。美国海军已扣押一艘试图突破封锁的伊朗籍货轮。伊朗誓言报复。油价飙升至$95以上，全球航运和能源市场剧烈震荡。这是本周所有板块的核心驱动因素。</p>
       </div>
     </div>
 
-    <!-- ==================== FINANCE ==================== -->
+    <!-- 航运板块 -->
     <div class="section">
-      <div class="section-header">
-        <span style="font-size:1.4rem;">📈</span>
-        <h2>财经板块</h2>
+      <div class="section-title">🚢 航运板块</div>
+
+      <div class="card">
+        <h3>核心指数</h3>
+        <div class="index-card">
+          <span class="name">BDI 波罗的海干散货指数</span>
+          <span class="value up">2,139 ↑44</span>
+        </div>
+        <div class="index-card">
+          <span class="name">BCI 好望角型指数</span>
+          <span class="value up">3,220 ↑72</span>
+        </div>
+        <p style="margin-top:12px; color: var(--text-secondary);">BDI 连续三个交易日上涨，创四个月新高。好望角型日均租金升至 $25,702（+$657）。霍尔木兹海峡封锁推动避险需求激增，干散货市场受益于货主提前备货行为。</p>
       </div>
-      <div class="section-body">
-        <div class="cards">
-          <div class="card">
-            <div class="card-label">道琼斯</div>
-            <div class="card-value">49,443</div>
-            <div class="card-delta down">▼ -0.01% (Apr 20)</div>
-          </div>
-          <div class="card">
-            <div class="card-label">S&P 500</div>
-            <div class="card-value">7,109</div>
-            <div class="card-delta down">▼ -0.24%</div>
-          </div>
-          <div class="card">
-            <div class="card-label">纳斯达克</div>
-            <div class="card-value">24,404</div>
-            <div class="card-delta down">▼ -0.26% · 终结13连阳</div>
-          </div>
-          <div class="card">
-            <div class="card-label">布伦特原油</div>
-            <div class="card-value">$95.42</div>
-            <div class="card-delta up">▲ +5.58%</div>
-          </div>
-          <div class="card">
-            <div class="card-label">WTI 原油</div>
-            <div class="card-value">$88.80</div>
-            <div class="card-delta up">▲ +5.0%</div>
-          </div>
-          <div class="card">
-            <div class="card-label">黄金</div>
-            <div class="card-value">$4,809</div>
-            <div class="card-delta down">▼ -0.51% · +40% YoY</div>
-          </div>
-          <div class="card">
-            <div class="card-label">比特币</div>
-            <div class="card-value">$74,026</div>
-            <div class="card-delta neutral">~ 区间波动</div>
-          </div>
-          <div class="card">
-            <div class="card-label">以太坊</div>
-            <div class="card-value">$2,269</div>
-            <div class="card-delta down">▼ 弱势整理</div>
-          </div>
-        </div>
 
-        <table>
-          <tr>
-            <th>资产</th>
-            <th>价格</th>
-            <th>日变动</th>
-            <th>关键驱动</th>
-          </tr>
-          <tr>
-            <td>Dow Jones</td>
-            <td>49,443</td>
-            <td class="down">-0.01%</td>
-            <td>美国-伊朗停火即将到期，避险情绪升温</td>
-          </tr>
-          <tr>
-            <td>S&P 500</td>
-            <td>7,109</td>
-            <td class="down">-0.24%</td>
-            <td>能源股随油价反弹，科技股承压</td>
-          </tr>
-          <tr>
-            <td>Nasdaq</td>
-            <td>24,404</td>
-            <td class="down">-0.26%</td>
-            <td>终结1992年以来最长13日连涨纪录</td>
-          </tr>
-          <tr>
-            <td>Brent 原油</td>
-            <td>$95.42/bbl</td>
-            <td class="up">+5.58%</td>
-            <td>停火不确定性重燃，霍尔木兹风险</td>
-          </tr>
-          <tr>
-            <td>WTI 原油</td>
-            <td>$88.80/bbl</td>
-            <td class="up">+5.0%</td>
-            <td>周五暴跌11.5%后技术性反弹</td>
-          </tr>
-          <tr>
-            <td>黄金</td>
-            <td>$4,809/t.oz</td>
-            <td class="down">-0.51%</td>
-            <td>3月曾因美伊冲突大涨，现高位震荡</td>
-          </tr>
-          <tr>
-            <td>铜</td>
-            <td>$13,290/mt (~$6.03/lb)</td>
-            <td class="down">-0.43%</td>
-            <td>供应紧张支撑，宏观压力短期压制</td>
-          </tr>
-          <tr>
-            <td>铁矿石 (62% Fe)</td>
-            <td>$107/mt</td>
-            <td class="down">-0.23%</td>
-            <td>中国需求预期稳定</td>
-          </tr>
-          <tr>
-            <td>比特币</td>
-            <td>~$74,000</td>
-            <td class="neutral">持平</td>
-            <td>波动区间 $73,762-$76,240</td>
-          </tr>
-          <tr>
-            <td>以太坊</td>
-            <td>$2,269</td>
-            <td class="down">-2.5%</td>
-            <td>SOL、XRP、DOGE 同步走弱</td>
-          </tr>
-        </table>
-
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>美股高位震荡：</strong>纳指终结 13 日连涨（1992年以来最长纪录），标普与道指微跌。特朗普明确表示美伊两周停火不会延长，能源股反弹而科技股获利回吐。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>原油剧烈波动：</strong>周五因伊朗宣布开放霍尔木兹海峡，油价暴跌超 11%；周一因停火前景生疑，Brent 反弹 5.6% 至 $95.42，WTI 重返 $88.80。地缘溢价仍是主导因子。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>黄金高位整固：</strong>金价 $4,809，较 3 月峰值回落（3月因美伊冲突曾创历史高位），但同比仍暴涨 40%，避险需求与美元强势形成拉锯。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>加密货币：</strong>比特币围绕 $74,000 窄幅震荡；Strategy（原 MicroStrategy）上周以 $25.4 亿购入 34,164 枚 BTC，为史上第三大单笔买入。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>重要财报：</strong>本周关注 GE Aerospace、UnitedHealth、RTX、Danaher、Intuitive Surgical、3M 等巨头财报。</div></li>
+      <div class="card">
+        <h3>集运市场</h3>
+        <ul>
+          <li>Drewry WCI 全球集运运价本周终结连续六周上涨趋势，出现小幅回落</li>
+          <li>上涨动力此前主要来自中东紧张局势推升的燃油附加费和航线绕行成本</li>
+          <li>亚洲-澳新航线运价基本稳定；跨太平洋、亚欧航线波动加剧</li>
+          <li>燃油附加费因油价飙升全面提速，海运和陆运均受影响</li>
+          <li>主要中转枢纽港（新加坡、丹戎帕拉帕斯等）拥堵加剧，船期可靠性下降</li>
         </ul>
+      </div>
 
-        <div class="analysis-box">
-          <h4>📊 分析与机会</h4>
-          <p>市场正处于<strong>地缘风险 vs 财报季</strong>的博弈窗口。原油的剧烈波动（两日振幅 >16%）显示霍尔木兹溢价高度敏感，建议短线交易者控制能源敞口。美股科技股 13 连阳后技术性回调属正常，若 Q1 财报超预期，纳指有望重拾升势。黄金虽高位震荡，但在地缘不确定性未消前，$4,600-$4,900 区间料有强支撑。加密市场关注 Strategy 的 BTC 增持及以太坊 ETF 资金流动。</p>
-        </div>
+      <div class="card">
+        <h3>📊 分析与展望</h3>
+        <p>霍尔木兹海峡危机是当前航运市场最大变量。若封锁持续，预计：</p>
+        <ul>
+          <li><strong>油轮市场</strong>：VLCC 运价将大幅攀升，中东-亚洲航线首当其冲</li>
+          <li><strong>干散货</strong>：BDI 有望继续冲高，铁矿石和煤炭运输需求旺盛</li>
+          <li><strong>集运</strong>：燃油成本压力持续，GRI 和 BAF 附加费将进一步上调</li>
+          <li>关注点：伊朗是否对过境商船采取进一步行动、保险费率变化</li>
+        </ul>
       </div>
     </div>
 
-    <!-- ==================== POLITICS ==================== -->
+    <!-- 财经板块 -->
     <div class="section">
-      <div class="section-header">
-        <span style="font-size:1.4rem;">📰</span>
-        <h2>时政板块</h2>
+      <div class="section-title">📈 财经板块</div>
+
+      <div class="card">
+        <h3>全球股市（4月20日收盘）</h3>
+        <table>
+          <thead>
+            <tr><th>指数</th><th>收盘</th><th>涨跌</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>标普500</td><td>7,109.14</td><td class="down">-0.24%</td><td>伊朗局势拖累</td></tr>
+            <tr><td>纳斯达克</td><td>24,404.39</td><td class="down">-0.26%</td><td>终结13日连涨（1992年以来最长）</td></tr>
+            <tr><td>道琼斯</td><td>49,447.43</td><td class="up">+1.79%</td><td>防御板块领涨</td></tr>
+            <tr><td>上证综指</td><td>4,078</td><td class="up">+0.67%</td><td>月涨6.95%，年涨23.91%</td></tr>
+          </tbody>
+        </table>
+        <p>纳斯达克终结了自1992年以来最长的13日连涨纪录。伊朗紧张局势推动资金从科技股流向防御性板块，道指逆势大涨。</p>
       </div>
-      <div class="section-body">
-        <div class="cards">
-          <div class="card">
-            <div class="card-label">🔴 今日最大风险</div>
-            <div class="card-value" style="font-size:1.1rem;">美伊停火今日到期</div>
-            <div class="card-delta down">特朗普：不会延长</div>
-          </div>
-          <div class="card">
-            <div class="card-label">🌍 霍尔木兹海峡</div>
-            <div class="card-value" style="font-size:1.1rem;">局势反复</div>
-            <div class="card-delta neutral">周五称开放 → 周末再封锁</div>
-          </div>
-          <div class="card">
-            <div class="card-label">🇨🇳 对华关税</div>
-            <div class="card-value">31.6%</div>
-            <div class="card-delta down">有效税率（2026年2月）</div>
-          </div>
-        </div>
 
-        <h3 style="margin: 20px 0 12px; font-size:1rem; color:var(--accent);">🇺🇸 美国要闻</h3>
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>美伊停火到期：</strong>为期两周的美伊停火协议将于 4 月 21 日（周二）到期。特朗普公开表示不会延长停火，除非霍尔木兹海峡"完全开放、自由、安全"。上周五伊朗曾宣布海峡对商船开放，导致油价暴跌 10%+，但周末船只遭袭事件令局势再度紧张。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>关税收入创纪录：</strong>据沃顿预算模型，2025年1月至2026年2月，美国新关税累计收入达 <strong>$2,248 亿</strong>。其中对华有效关税税率达 31.6%，为所有贸易伙伴中最高。</div></li>
+      <div class="card">
+        <h3>大宗商品</h3>
+        <table>
+          <thead>
+            <tr><th>品种</th><th>价格</th><th>日涨跌</th><th>月涨跌</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>WTI原油</td><td>$88.09/桶</td><td class="up">+5.06%</td><td>-0.04%</td></tr>
+            <tr><td>Brent原油</td><td>~$96.18/桶</td><td class="up">急涨</td><td>受霍尔木兹危机推动</td></tr>
+            <tr><td>黄金</td><td>$4,809/oz</td><td class="down">-0.51%</td><td>+9.09%</td></tr>
+          </tbody>
+        </table>
+        <p>原油因霍尔木兹海峡封锁单日飙涨超5%，Brent一度突破$95。黄金小幅回调但月线依然强劲（+9%），避险需求托底。年涨幅达40%。</p>
+      </div>
+
+      <div class="card">
+        <h3>加密货币</h3>
+        <table>
+          <thead>
+            <tr><th>币种</th><th>价格</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>BTC</td><td>$75,242</td><td>开盘$73,820后反弹，受避险情绪提振</td></tr>
+            <tr><td>ETH</td><td>$2,307</td><td>开盘$2,263后回升</td></tr>
+          </tbody>
+        </table>
+        <p>尽管美伊紧张局势加剧，加密市场展现韧性，开盘后快速反弹。BTC继续扮演"数字黄金"角色。</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 财经分析与投资机会</h3>
+        <ul>
+          <li><strong>能源股</strong>：油价急涨利好能源板块，短期关注石油股和油服股</li>
+          <li><strong>防御配置</strong>：军工、公用事业、黄金矿业股在地缘风险期间表现占优</li>
+          <li><strong>科技回调</strong>：纳斯达克13连涨后回调是健康调整，若伊朗局势缓和可能提供加仓机会</li>
+          <li><strong>A股</strong>：上证站上4078，月线强劲，内需驱动逻辑未变</li>
+          <li><strong>风险</strong>：若霍尔木兹封锁长期化，全球通胀预期将大幅上修</li>
         </ul>
-
-        <h3 style="margin: 20px 0 12px; font-size:1rem; color:var(--accent);">🇺🇦 欧洲 / 俄乌</h3>
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>乌克兰大规模反击：</strong>4月18-19日夜间，乌克兰对俄罗斯多个战略目标发动打击，包括位于塔甘罗格的无人机工厂及黑海港口图阿普谢的油库。俄方称图阿普谢袭击至少造成 1 人死亡、火灾蔓延。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>俄军无人机攻势：</strong>4月19日夜间，俄罗斯向乌克兰发射超过 <strong>230 架无人机</strong>，为近期最大规模空袭之一。泽连斯基批评美国默许俄罗斯石油出口，称这将资助俄军。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>匈牙利能源困境：</strong>俄罗斯 1 月袭击致德鲁日巴输油管道受损，匈牙利因此否决欧盟贷款方案。该国作为内陆国严重依赖俄油管道供应。</div></li>
-        </ul>
-
-        <h3 style="margin: 20px 0 12px; font-size:1rem; color:var(--accent);">🇨🇳 中国 / 亚太</h3>
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>中国股市走强：</strong>上证综指 4 月 20 日收于 <strong>4,078 点</strong>，单日涨 0.67%，月涨 6.95%，同比大涨 23.91%。A 股韧性引发外资回流预期。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>关税反制持续：</strong>中国针对美国商品的报复性关税仍在执行，美国对华农产品出口高度依赖中国国有贸易公司的采购配额（2026-2028 年度大豆采购承诺）。</div></li>
-        </ul>
-
-        <div class="analysis-box">
-          <h4>📊 深度分析</h4>
-          <p><strong>地缘风险三角：</strong>中东（美伊/霍尔木兹）、东欧（俄乌）与中美贸易战形成三重压力。今日美伊停火到期是最大尾部风险——若冲突重燃，油价可能重返 $100+，全球通胀预期将再度恶化。欧洲方面，俄乌冲突进入第 3 年，俄军春季攻势在多条战线推进缓慢，乌军以无人机反击维持僵局。中国方面，A 股强势与经济基本面之间的张力值得观察，23.91% 的同比涨幅是否可持续取决于后续财政刺激力度。</p>
-        </div>
       </div>
     </div>
 
-    <!-- ==================== AI / ROBOTICS ==================== -->
+    <!-- 时政板块 -->
     <div class="section">
-      <div class="section-header">
-        <span style="font-size:1.4rem;">🤖</span>
-        <h2>AI / 机器人板块</h2>
+      <div class="section-title">📰 时政板块</div>
+
+      <div class="card">
+        <h3>🔥 今日头条：霍尔木兹海峡危机全面升级</h3>
+        <ul>
+          <li>4月12日：美伊伊斯兰堡谈判破裂，特朗普宣布对伊朗海上封锁</li>
+          <li>4月18日：伊朗宣布全面关闭霍尔木兹海峡，直至美国解除封锁</li>
+          <li>4月19日：美国海军扣押一艘试图突破封锁的伊朗籍货轮，德黑兰誓言"迅速报复"</li>
+          <li>4月20日：多艘商船在海峡入口掉头返航，船舶追踪显示航行量骤降</li>
+          <li>背景：危机源于4月8日黎巴嫩袭击事件后伊朗对海峡通行的限制</li>
+        </ul>
       </div>
-      <div class="section-body">
-        <div class="cards">
-          <div class="card">
-            <div class="card-label">💰 Cerebras IPO</div>
-            <div class="card-value">$23B 估值</div>
-            <div class="card-delta up">代码 CBRS · 目标5月中上市</div>
-          </div>
-          <div class="card">
-            <div class="card-label">🦾 Tesla Optimus</div>
-            <div class="card-value">Gen 3 即将发布</div>
-            <div class="card-delta up">人形手取得突破</div>
-          </div>
-          <div class="card">
-            <div class="card-label">🔥 Cortex 2.0</div>
-            <div class="card-value">250 MW</div>
-            <div class="card-delta up">Giga Texas · 年中扩至 500 MW</div>
-          </div>
-          <div class="card">
-            <div class="card-label">🇨🇳 DeepSeek V4</div>
-            <div class="card-value">月底发布</div>
-            <div class="card-delta up">万亿参数 · $10B+ 估值融资</div>
-          </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>美国</h3>
+          <ul>
+            <li>2026中期选举进入白热化，亚利桑那州最大县陷入选举争议</li>
+            <li>美联储主席提名人 Kevin Warsh 面临与总统在利率问题上的对抗风险</li>
+            <li>SpaceX、Anthropic、OpenAI 均在筹备IPO，科技巨头上市潮将至</li>
+          </ul>
         </div>
+        <div class="card">
+          <h3>欧洲 & 其他</h3>
+          <ul>
+            <li>爱尔兰总理 Leo 在喀麦隆发表强硬讲话，否认针对特朗普</li>
+            <li>英国通胀数据受关注，2026经济前景面临考验</li>
+            <li>全球柴油价格持续高企（$5.61/加仑），推高陆运成本</li>
+          </ul>
+        </div>
+      </div>
 
-        <h3 style="margin: 20px 0 12px; font-size:1rem; color:var(--accent);">🔥 今日热点</h3>
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>Cerebras 冲刺 IPO：</strong>英伟达劲敌 Cerebras Systems 正式递交美股 IPO 申请，拟于 5 月中旬在纳斯达克上市，代码 <strong>CBRS</strong>。公司估值 $230 亿（Series H），2025 年营收 $5.1 亿，已实现盈利（每股 $1.38）。CEO Andrew Feldman 称已从英伟达手中"夺走快速推理业务"。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>Tesla Optimus Gen 3：</strong>特斯拉人形机器人即将发布第三代，最新视频展示了接近人类形态与功能的"下一代手部"，被工程师称为人形机器人的"圣杯"。Optimus 于 4 月 19-20 日亮相波士顿马拉松终点展示区。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>Tesla Cortex 2.0 超算上线：</strong>位于德州 Gigafactory 的 Cortex 2.0 超算首阶段达 <strong>250 MW</strong>，计划年中扩至 500 MW。这是目前人形机器人公司中规模最大的专用训练集群。</div></li>
+      <div class="card">
+        <h3>📊 地缘政治影响分析</h3>
+        <p>霍尔木兹海峡承载全球约20%的石油运输量。当前的双向封锁（美国封锁伊朗港口 + 伊朗关闭海峡）是数十年来最严重的海上对峙。主要影响：</p>
+        <ul>
+          <li>全球原油供应链面临严重中断风险，能源价格将维持高位</li>
+          <li>航运保险费率预计大幅上调，波斯湾航线可能被列为高风险区</li>
+          <li>中国、日本、韩国作为主要进口方，战略石油储备可能启动释放</li>
+          <li>若局势进一步升级，不排除影响全球通胀路径和央行政策节奏</li>
         </ul>
+      </div>
+    </div>
 
-        <h3 style="margin: 20px 0 12px; font-size:1rem; color:var(--accent);">🇨🇳 中国动态</h3>
-        <ul class="news-list">
-          <li><div class="news-dot"></div><div class="news-text"><strong>DeepSeek V4 即将发布：</strong>据传 DeepSeek 将在 4 月底发布万亿参数级 V4 模型，同时启动首轮融资，估值超过 <strong>$100 亿</strong>。此前 DeepSeek 以极低训练成本震动硅谷，V4 能否延续"性价比神话"备受关注。</div></li>
-          <li><div class="news-dot"></div><div class="news-text"><strong>阿里通义千问更新：</strong>Qwen 3.5-Omni 与 Qwen 3.6-Plus 于 4 月发布（ proprietary 版本），同时开源 Qwen 3.6-35B-A3B（Apache 2.0 协议）。阿里持续在中美开源大模型竞赛中保持高频迭代。</div></li>
+    <!-- AI/机器人板块 -->
+    <div class="section">
+      <div class="section-title">🤖 AI / 机器人板块</div>
+
+      <div class="card">
+        <h3>🔥 本周重磅</h3>
+        <ul>
+          <li><strong>Cerebras Systems 正式提交IPO申请</strong>（4月17日）— 这家AI芯片公司在撤回去年的上市计划后重新递交招股书，标志着AI硬件赛道的资本化加速。与NVIDIA正面竞争。</li>
+          <li><strong>Anthropic CEO Dario Amodei 将赴白宫讨论 Mythos 模型</strong> — Claude Mythos 5 引发政策层面关注</li>
+          <li><strong>科技巨头资本开支预计达$7000亿</strong> — Alphabet、Microsoft、Amazon、Meta 今年在AI数据中心基础设施上的投入创历史纪录</li>
         </ul>
+      </div>
 
-        <h3 style="margin: 20px 0 12px; font-size:1rem; color:var(--accent);">📈 投资动态 / 股价</h3>
+      <div class="card">
+        <h3>模型与技术动态</h3>
+        <ul>
+          <li><span class="tag">Anthropic</span> Claude Mythos 5 发布，据报道参数规模达10万亿级别</li>
+          <li><span class="tag">Google</span> Gemini 3.1 发布，多模态能力进一步升级</li>
+          <li><span class="tag">Stanford</span> 2026 AI Index 报告发布（4月13日），全面评估AI行业现状</li>
+          <li><span class="tag">OpenAI</span> 收购 TBPN（Technology Business Programming Network），进军媒体领域</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI概念股</h3>
         <table>
-          <tr>
-            <th>标的</th>
-            <th>动态</th>
-            <th>看点</th>
-          </tr>
-          <tr>
-            <td>Cerebras (CBRS)</td>
-            <td class="up">IPO 申请中 · $23B 估值</td>
-            <td>AI 芯片第二极，对标 NVDA</td>
-          </tr>
-          <tr>
-            <td>NVIDIA</td>
-            <td class="down">面临玩家群体反弹</td>
-            <td>DLSS 5 与 AI 芯片抢占 GPU 显存资源</td>
-          </tr>
-          <tr>
-            <td>Tesla</td>
-            <td class="up">Optimus + 超算双线推进</td>
-            <td>人形机器人商业化拐点临近</td>
-          </tr>
-          <tr>
-            <td>Strategy (MSTR)</td>
-            <td class="up">上周买入 34,164 BTC</td>
-            <td>耗资 $25.4 亿，史上第三大买入</td>
-          </tr>
+          <thead>
+            <tr><th>股票</th><th>参考价</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>NVDA</td><td>~$200.88</td><td>Mag7 capex $7000亿利好，但伊朗局势短期承压</td></tr>
+            <tr><td>Cerebras</td><td>即将IPO</td><td>AI芯片挑战者，定价待定</td></tr>
+          </tbody>
         </table>
+      </div>
 
-        <div class="analysis-box">
-          <h4>📊 深度分析</h4>
-          <p><strong>AI 芯片格局生变：</strong>Cerebras IPO 标志着 AI 算力市场从"英伟达独大"走向多极竞争。Cerebras 的 wafer-scale 架构在推理侧已证明效率优势，$5.1 亿营收且已盈利的数据在芯片初创中极为罕见。另一方面，Tesla 以 250 MW 超算 + Gen 3 机器人展示了"垂直整合"路线的爆发力——如果 Optimus 能在工厂场景实现规模化部署，估值逻辑将从车企切换为机器人平台。中国侧，DeepSeek V4 与 Qwen 3.6 的双线推进显示国产大模型在技术迭代上已与硅谷保持同频，但商业化变现路径仍待验证。</p>
-        </div>
+      <div class="card">
+        <h3>📊 AI行业分析</h3>
+        <ul>
+          <li><strong>IPO潮来临</strong>：Cerebras、SpaceX、Anthropic、OpenAI均在准备上市，AI领域即将迎来史上最大规模IPO浪潮</li>
+          <li><strong>模型军备竞赛</strong>：Claude Mythos 5（10T参数）和 Gemini 3.1 的发布表明，大模型竞争远未结束</li>
+          <li><strong>基础设施投资</strong>：$7000亿级别的数据中心投入意味着AI硬件（GPU、光模块、电力）需求将持续强劲</li>
+          <li><strong>监管关注</strong>：Anthropic CEO赴白宫讨论模型安全，表明政府对超大模型的审查力度在加强</li>
+        </ul>
       </div>
     </div>
 
@@ -544,11 +318,9 @@
 
   <footer>
     <div class="container">
-      <p>每日深度简报 · 由 AI 自动生成 · 仅供参考 · 不构成投资建议</p>
-      <p style="margin-top:4px;">数据来源：Trading Economics, CNBC, Reuters, BBC, Seeking Alpha, CoinDesk, Drewry, Baltic Exchange</p>
-      <p style="margin-top:8px; color:var(--accent);">Generated on 2026-04-21 · mast0506.github.io/daily-report/</p>
+      <p>📊 每日深度简报 · 由 AI 自动生成 · 2026年4月21日</p>
+      <p style="margin-top:4px;">资讯仅供参考，不构成投资建议 · Powered by OpenClaw</p>
     </div>
   </footer>
-
 </body>
 </html>
