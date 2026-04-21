@@ -72,12 +72,20 @@
     }
     .highlight-box {
       background: linear-gradient(135deg, #1a1e2e, #21262d);
+      border-left: 4px solid var(--accent-orange);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .highlight-box h4 { color: var(--accent-orange); margin-bottom: 8px; }
+    .highlight-box2 {
+      background: linear-gradient(135deg, #1a1e2e, #21262d);
       border-left: 4px solid var(--accent-red);
       border-radius: 6px;
       padding: 16px 20px;
       margin-bottom: 16px;
     }
-    .highlight-box h4 { color: var(--accent-red); margin-bottom: 8px; }
+    .highlight-box2 h4 { color: var(--accent-red); margin-bottom: 8px; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
     footer {
@@ -114,9 +122,13 @@
 
     <!-- 重大事件警报 -->
     <div class="section">
+      <div class="highlight-box2">
+        <h4>🚨 重大事件：Tim Cook 宣布卸任苹果CEO，John Ternus 将于9月接任</h4>
+        <p style="color: var(--text-primary);">4月20日，苹果公司CEO Tim Cook正式宣布将于今年9月卸任CEO，转任执行董事长。继任者为硬件工程高级副总裁 John Ternus（50岁）。Cook执掌苹果15年，将公司市值推至$4万亿。这是自2011年乔布斯离世以来苹果最重大的领导层变动。</p>
+      </div>
       <div class="highlight-box">
-        <h4>🚨 重大地缘事件：霍尔木兹海峡危机持续发酵</h4>
-        <p style="color: var(--text-primary);">美伊对峙进入第10天。伊朗维持霍尔木兹海峡全面关闭状态，美国海军在阿曼湾维持封锁线。商船绕行非洲好望角航线激增，航程延长约10-14天。全球能源和航运市场持续承压，布伦特原油站稳$96上方。市场焦点转向伊朗"迅速报复"承诺是否兑现，以及OPEC+是否启动备用产能。</p>
+        <h4>⚡ 美伊停火无限期延长，和平谈判继续</h4>
+        <p style="color: var(--text-primary);">4月21日，特朗普在停火到期前数小时宣布无限期延长与伊朗的停火协议，直到伊朗提交永久和平方案。巴基斯坦调停的两周停火（4月8日生效）虽仍大体维持，但双方互指违规，零星冲突持续。市场谨慎乐观，油价从高位小幅回落。</p>
       </div>
     </div>
 
@@ -125,46 +137,45 @@
       <div class="section-title">🚢 航运板块</div>
 
       <div class="card">
-        <h3>核心指数（4月18日收盘）</h3>
+        <h3>核心指数（最新数据）</h3>
         <div class="index-card">
           <span class="name">BDI 波罗的海干散货指数</span>
-          <span class="value up">2,484 ↑130</span>
+          <span class="value down">~1,450 区间震荡</span>
         </div>
         <div class="index-card">
           <span class="name">BCI 好望角型指数</span>
-          <span class="value up">3,964 ↑293</span>
+          <span class="value down">2,771 ↓2.2%</span>
         </div>
         <div class="index-card">
           <span class="name">BPI 巴拿马型指数</span>
-          <span class="value down">1,652 ↓7</span>
+          <span class="value up">1,670 ↑1.3%</span>
         </div>
         <div class="index-card">
           <span class="name">BSI 超灵便型指数</span>
-          <span class="value up">1,218 ↑2</span>
+          <span class="value">持平</span>
         </div>
-        <p style="margin-top:12px; color: var(--text-secondary);">BDI 创近五个月新高，单周暴涨超30%。好望角型日均租金飙升至 $32,450（+$2,658），铁矿石和煤炭运输需求旺盛。巴拿马型小幅回调，中小船型表现分化。霍尔木兹封锁推动全球货主加速补库，干散货市场全面升温。</p>
+        <p style="margin-top:12px; color: var(--text-secondary);">好望角型指数跌至两周低点2,771点，铁矿石运输需求放缓。巴拿马型逆势上涨1.3%至1,670点，谷物和煤炭运输支撑。停火延长缓解了航运保险压力，但波斯湾航线仍维持高风险评级。</p>
       </div>
 
       <div class="card">
         <h3>集运市场</h3>
         <ul>
-          <li>Drewry WCI 全球集运运价本周出现小幅回落，终结此前连续六周上涨</li>
-          <li>中东局势推升燃油附加费（BAF）全面提速，亚欧航线附加费上调15-20%</li>
-          <li>波斯湾航线大面积停航，货物正紧急转移至红海/苏伊士或绕行好望角</li>
-          <li>新加坡、丹戎帕拉帕斯、杰贝阿里港拥堵加剧，船期可靠性降至60%以下</li>
-          <li>SCFI 上海出口集装箱运价指数因航线重构出现结构性波动，美西线暂稳</li>
+          <li>SCFI 上海集装箱运价指数2月均值约1,284点，较去年同期下跌33%</li>
+          <li>美伊停火缓解了绕行好望角的紧迫性，但多数船东仍维持绕行方案</li>
+          <li>美国创纪录原油出口船队正驶向亚洲，弥补伊朗供应缺口</li>
+          <li>全球集运运力过剩格局未变，新造船交付高峰延续至Q3</li>
+          <li>联合战争险委员会（JWC）维持波斯湾高风险区评级，保费未见明显回落</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>📊 分析与展望</h3>
-        <p>霍尔木兹危机仍是航运市场唯一叙事主线：</p>
         <ul>
-          <li><strong>油轮市场</strong>：VLCC 中东-亚洲航线运价料将翻倍，WS（Worldscale）指数可能突破150点</li>
-          <li><strong>干散货</strong>：BDI 已脱离低位区间，若中国补库持续，有望测试3,000点关口</li>
-          <li><strong>集运</strong>：绕行成本将长期化，Q2-Q3 GRI（综合费率上涨）几乎确定</li>
-          <li><strong>保险</strong>：联合战争险委员会（JWC）已将波斯湾列为高风险区，保费上涨3-5倍</li>
-          <li>关注点：伊朗报复行动形态、OPEC+产能响应、中国铁矿石采购节奏</li>
+          <li><strong>油轮市场</strong>：美国向亚洲出口原油船队创纪录，VLCC需求强劲，但若和平协议达成将快速回落</li>
+          <li><strong>干散货</strong>：好望角型承压，BCI回落至2,771；关注中国铁矿石库存去化节奏</li>
+          <li><strong>集运</strong>：运力过剩+运价下行趋势未改，SCFI同比-33%反映结构性供大于求</li>
+          <li><strong>关键变量</strong>：美伊和平谈判进展将决定波斯湾航线何时恢复正常通行</li>
+          <li><strong>投资逻辑</strong>：停火延长利空油轮和绕行受益股，利好集运成本端改善</li>
         </ul>
       </div>
     </div>
@@ -174,59 +185,59 @@
       <div class="section-title">📈 财经板块</div>
 
       <div class="card">
-        <h3>全球股市（4月21日收盘）</h3>
+        <h3>全球股市（4月21日）</h3>
         <table>
           <thead>
             <tr><th>指数</th><th>收盘</th><th>涨跌</th><th>备注</th></tr>
           </thead>
           <tbody>
-            <tr><td>标普500</td><td>~5,450</td><td class="up">+0.15%</td><td>震荡整理，防御板块偏强</td></tr>
-            <tr><td>纳斯达克</td><td>~17,100</td><td class="down">-0.08%</td><td>RSI维持73高位，技术性超买</td></tr>
-            <tr><td>道琼斯</td><td>~40,800</td><td class="up">+0.50%</td><td>能源、公用事业领涨</td></tr>
-            <tr><td>上证综指</td><td>~3,280</td><td class="up">+0.40%</td><td>震荡中缓慢抬升</td></tr>
+            <tr><td>标普500</td><td>7,100+</td><td class="up">首次收于7,100上方</td><td>4/17创历史新高</td></tr>
+            <tr><td>纳斯达克</td><td>24,404</td><td class="down">-0.26%</td><td>1992年以来最长连涨纪录后回调</td></tr>
+            <tr><td>道琼斯</td><td>49,443</td><td class="down">-0.01%</td><td>基本持平</td></tr>
+            <tr><td>上证综指</td><td>~3,300</td><td class="up">震荡抬升</td><td>停火利好市场情绪</td></tr>
           </tbody>
         </table>
-        <p>美股呈现分化格局。道指受能源板块提振逆势上涨，纳指在RSI 73的超买区域承压整理。Schwab分析师警告" modest profit-taking pullback"（温和获利回吐）风险正在累积。</p>
+        <p>美股进入高位震荡整理期。S&P 500上周五首次收于7,100上方，纳斯达克创1992年以来最长连涨纪录后出现获利回吐。Tim Cook卸任消息令AAPL盘后承压，但John Ternus硬件背景被市场视为积极信号。美伊停火无限期延长缓解了地缘风险溢价。</p>
       </div>
 
       <div class="card">
         <h3>大宗商品</h3>
         <table>
           <thead>
-            <tr><th>品种</th><th>价格</th><th>日涨跌</th><th>备注</th></tr>
+            <tr><th>品种</th><th>价格</th><th>趋势</th><th>备注</th></tr>
           </thead>
           <tbody>
-            <tr><td>WTI原油</td><td>~$88/桶</td><td class="up">+3.5%</td><td>霍尔木兹溢价持续</td></tr>
-            <tr><td>Brent原油</td><td>~$96.5/桶</td><td class="up">+2.8%</td><td>全球20%石油运输受阻</td></tr>
-            <tr><td>黄金</td><td>~$3,350/oz</td><td class="up">+0.3%</td><td>避险需求稳固</td></tr>
-            <tr><td>天然气（HH）</td><td>~$3.80/MMBtu</td><td class="up">+1.2%</td><td>替代需求预期</td></tr>
+            <tr><td>Brent原油</td><td>$96.26/桶</td><td class="warn">高位震荡</td><td>停火延长缓解供应恐慌，但仍处高位</td></tr>
+            <tr><td>黄金</td><td>$4,782/oz</td><td class="down">-0.81%</td><td>月涨8.5%，年涨43%，小幅获利回吐</td></tr>
+            <tr><td>天然气（HH）</td><td>~$3.80/MMBtu</td><td class="up">替代需求</td><td>伊朗天然气出口中断推升</td></tr>
           </tbody>
         </table>
-        <p>原油在霍尔木兹海峡封锁的第十个交易日维持强势。布伦特站稳$96上方，市场正在定价供应中断风险。若伊朗兑现报复承诺或沙特设施遇袭，油价可能冲击$100-110区间。黄金维持高位震荡，避险配置需求未减。</p>
+        <p>黄金在$4,782附近小幅回调，但过去一个月涨幅仍达8.5%，年涨幅高达43%——地缘避险+全球央行购金双重驱动。布伦特原油维持$96区间，停火延长消息暂时抑制了进一步上冲动力，但市场对和平协议前景仍持谨慎态度。美国向亚洲出口创纪录原油船队正在路上。</p>
       </div>
 
       <div class="card">
         <h3>加密货币</h3>
         <table>
           <thead>
-            <tr><th>币种</th><th>价格</th><th>备注</th></tr>
+            <tr><th>币种</th><th>价格</th><th>24h变动</th><th>备注</th></tr>
           </thead>
           <tbody>
-            <tr><td>BTC</td><td>~$74,500</td><td>受美伊紧张波动，盘中振幅5%</td></tr>
-            <tr><td>ETH</td><td>~$2,280</td><td>跟随大盘，DeFi协议TVL企稳</td></tr>
+            <tr><td>BTC</td><td>$75,855</td><td class="up">+1.2%</td><td>停火利好风险偏好回升</td></tr>
+            <tr><td>ETH</td><td>$2,322</td><td class="up">+1.2%</td><td>DeFi TVL企稳</td></tr>
+            <tr><td>SOL</td><td>$85.51</td><td class="up">+0.6%</td><td>生态活跃度维持</td></tr>
           </tbody>
         </table>
-        <p>加密市场对地缘风险展现韧性，未出现恐慌性抛售。BTC盘中受美伊动态影响波动加剧，但收盘稳定在$74,000-$75,000区间。加密资产继续被部分投资者视为"数字黄金"替代品。</p>
+        <p>加密市场随停火延长消息温和上涨。BTC站稳$75,000上方，ETH回到$2,300+。Trump家族World Liberty加密项目面临投资者反弹（FT报道）。整体市场情绪从恐慌转向谨慎乐观。</p>
       </div>
 
       <div class="card">
         <h3>📊 财经分析与投资机会</h3>
         <ul>
-          <li><strong>能源股</strong>：油价高位运行直接利好油气上游（E&P）和油服板块，关注XLE、OIH</li>
-          <li><strong>防御配置</strong>：公用事业（XLU）、消费必需（XLP）、黄金矿业（GDX）在地缘风险窗口期持续占优</li>
-          <li><strong>科技观望</strong>：纳斯达克RSI 73+逼近历史超买阈值，短期建议等待回调后再加仓Mag7</li>
-          <li><strong>A股</strong>：上证3,280附近震荡，关注地缘局势对北向资金流向的影响</li>
-          <li><strong>核心风险</strong>：若霍尔木兹封锁超两周，全球通胀预期将大幅上修，可能迫使美联储重新评估降息路径</li>
+          <li><strong>AAPL换帅</strong>：Tim Cook→John Ternus过渡期（至9月）创造交易窗口。Ternus硬件背景或推动Apple硬件创新加速（Vision Pro 2、AR眼镜）</li>
+          <li><strong>停火交易</strong>：无限期停火利好风险资产、利空避险资产。若和平协议达成，油价可能回落至$80-85，黄金面临短期回调压力</li>
+          <li><strong>美股高位</strong>：S&P 7,100+创历史新高，但估值已充分。建议关注Q1财报季（本周密集发布）验证盈利质量</li>
+          <li><strong>黄金</strong>：年涨43%后短期获利回吐正常，但央行购金+地缘不确定性支撑长期逻辑不变</li>
+          <li><strong>核心风险</strong>：停火随时可能崩溃——双方互指违规，零星冲突未停。需紧密跟踪伊朗和平方案提交节点</li>
         </ul>
       </div>
     </div>
@@ -236,46 +247,43 @@
       <div class="section-title">📰 时政板块</div>
 
       <div class="card">
-        <h3>🔥 今日头条：美伊对峙持续，中国借机扩大全球影响力</h3>
+        <h3>🔥 今日头条</h3>
         <ul>
-          <li><strong>华盛顿邮报（4月20日）</strong>：北京官员、智库学者和商界领袖正将美国内部混乱视为战略机遇，加速扩大全球影响力</li>
-          <li><strong>ECFR调查</strong>：最新全球民调显示，特朗普的政策客观上提升了中国的国际形象——"他没有从政是为了让中国伟大，但结果如此"</li>
-          <li><strong>霍尔木兹危机时间线</strong>：4月12日美伊谈判破裂→海上封锁→4月18日伊朗关闭海峡→进入对峙第10天</li>
-          <li>美国海军扣押伊朗籍货轮后，伊朗誓言"迅速报复"，但未明确行动方式和时间</li>
-          <li>多艘国际商船在海峡入口处掉头，船舶追踪数据显示日均通行量骤降85%</li>
+          <li><strong>美伊停火无限期延长</strong>（Reuters/CNN/NYT，4月21日）：特朗普在停火到期前数小时宣布延长，直到伊朗提交永久和平方案。巴基斯坦斡旋的两周停火（4月8日起）大体维持，但双方互指违规</li>
+          <li><strong>Tim Cook 卸任苹果CEO</strong>（NYT/NPR/TechCrunch，4月20日）：Cook将于9月转任执行董事长，John Ternus接任。Cook执掌15年，将苹果市值推至$4万亿</li>
+          <li><strong>加沙停火半年</strong>（NPR，4月21日）：加沙与以色列停火已满六个月，援助恢复但远不够，重建尚未开始，200万居民处境依然艰难</li>
+          <li><strong>Trump家族加密项目遇阻</strong>（FT，4月21日）：World Liberty加密项目面临投资者强烈反弹</li>
         </ul>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <h3>美国 & 美洲</h3>
+          <h3>美国 & 中东</h3>
           <ul>
-            <li>特朗普第二任期政策持续制造全球不确定性，盟友关系紧张</li>
-            <li>美联储主席提名人 Kevin Warsh 面临与总统在利率政策上的潜在对抗</li>
-            <li>SpaceX、Anthropic、OpenAI 均处于IPO筹备阶段，科技上市潮即将来临</li>
-            <li>亚利桑那州选举争议升温，2026中期选举格局不明朗</li>
+            <li>美伊战争停火进入关键谈判阶段，Vance中东之行暂缓</li>
+            <li>美国创纪录原油出口船队驶向亚洲，弥补伊朗供应缺口</li>
+            <li>特朗普表态：若协议无法达成，军事行动可能恢复</li>
+            <li>巴基斯坦总理感谢特朗普接受延长停火请求</li>
           </ul>
         </div>
         <div class="card">
-          <h3>欧洲 & 其他</h3>
+          <h3>全球其他</h3>
           <ul>
-            <li><strong>匈牙利</strong>：Tisza党领袖 Péter Magyar 在4月12日议会选举中获胜，欧尔班时代可能终结</li>
-            <li><strong>欧洲外交</strong>：拉夫罗夫外长访华（4月中旬），中俄就双边关系和国际议题交换意见</li>
-            <li><strong>欧洲战略</strong>：中国正构建"绿色集团"，而美国加倍押注化石能源，欧洲面临选边站队压力</li>
-            <li><strong>能源成本</strong>：全球柴油价格持续高企（$5.61+/加仑），陆运和农业成本全面攀升</li>
+            <li><strong>加沙</strong>：停火半年标记，援助恢复但重建遥遥无期</li>
+            <li><strong>地球日</strong>：4月22日全球地球日，气候议题与能源安全议题交织</li>
+            <li><strong>欧洲</strong>：欧盟密切关注美伊谈判，能源供应安全仍是核心关切</li>
+            <li><strong>亚太</strong>：中日韩加速战略石油储备调配，应对波斯湾供应不确定性</li>
           </ul>
         </div>
       </div>
 
       <div class="card">
         <h3>📊 地缘政治影响分析</h3>
-        <p>霍尔木兹海峡承载全球约20%的石油运输量，当前双向封锁已进入第10天，是数十年来最严重的海上对峙：</p>
         <ul>
-          <li><strong>能源安全</strong>：亚洲主要进口国（中国、日本、韩国、印度）战略石油储备可能在未来两周内启动释放</li>
-          <li><strong>航运保险</strong>：联合战争险委员会已将波斯湾列为高风险区，保费飙升3-5倍，部分船东考虑停航</li>
-          <li><strong>中国战略机遇</strong>：华盛顿邮报分析指出，北京正在利用美国全球领导力真空加速扩大影响力，"绿色集团"vs"石油集团"格局浮现</li>
-          <li><strong>欧洲困境</strong>：能源安全与对华关系之间的平衡被霍尔木兹危机打破，欧洲可能被迫更加依赖美国安全承诺</li>
-          <li><strong>全球通胀</strong>：若封锁长期化，能源价格驱动的通胀回升可能打乱全球央行降息节奏</li>
+          <li><strong>停火博弈</strong>：无限期延长是积极信号，但"直到伊朗提交方案"的措辞保留了美方重启军事行动的空间。市场不应过度乐观</li>
+          <li><strong>能源格局重塑</strong>：美国向亚洲出口原油船队创纪录，战争正在加速全球能源贸易流向重组</li>
+          <li><strong>苹果权力交接</strong>：作为全球市值最大公司（$4T），CEO换帅的影响远超科技行业，涉及供应链（中国）、政策游说、AI战略方向</li>
+          <li><strong>加沙长期化</strong>：停火半年但重建未启动，人道主义危机可能在2026下半年再次升级</li>
         </ul>
       </div>
     </div>
@@ -287,22 +295,23 @@
       <div class="card">
         <h3>🔥 本周重磅</h3>
         <ul>
-          <li><strong>Anthropic 发布 Claude Mythos 5</strong> — 据报道参数规模达10万亿级别，为迄今最大公开模型。Anthropic CEO Dario Amodei 将赴白宫讨论模型安全与监管</li>
-          <li><strong>SpaceX 收购 xAI，估值 $2500亿</strong> — 马斯克将SpaceX与xAI深度整合，打造"地球上最聪明的公司"</li>
-          <li><strong>Google 发布 TurboQuant 效率突破</strong> — 在保持性能前提下大幅降低推理成本，可能重塑AI基础设施经济学</li>
-          <li><strong>Cerebras Systems 重新提交IPO申请</strong> — AI芯片挑战者在撤回去年的上市计划后再度冲击资本市场，正面迎战NVIDIA</li>
+          <li><strong>Lloyds银行首推AI投资顾问</strong>（Reuters，4月21日）：Lloyds成为首家引入AI工具辅助客户投资决策的英国银行，金融AI监管讨论升温</li>
+          <li><strong>NVIDIA 国家机器人周</strong>：展示Physical AI最新成果，Isaac GR00T N1.6开放模型支持人形机器人全身控制，与Hugging Face社区深度合作</li>
+          <li><strong>Stanford 2026 AI Index报告</strong>（4月13日发布）：22-25岁软件开发者就业自2022年以来下降近20%，AI对初级岗位冲击显现</li>
+          <li><strong>AI网络安全警报</strong>：Alston & Bird报告指出企业AI系统正成为网络攻击者新目标</li>
+          <li><strong>AI创业融资</strong>：Refiant获$5M融资，专注降低AI能耗；Airrived入选Gartner"Agentic AI初创企业观察名单"</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>模型与技术动态</h3>
         <ul>
-          <li><span class="tag">Anthropic</span> Claude Mythos 5（10T参数）发布，推理模型军备竞赛白热化</li>
-          <li><span class="tag">Google</span> Gemini 3.1 发布，多模态能力升级，支持更长上下文窗口</li>
-          <li><span class="tag">xAI</span> Grok 4.20 Beta 2 成为当前公开旗舰模型，SpaceX收购后资源将大幅扩充</li>
-          <li><span class="tag">OpenAI</span> 官方承认提示注入攻击（prompt injection）是结构性安全风险，无法完全修补</li>
-          <li><span class="tag">NVIDIA</span> 国家机器人周发布多项Physical AI研究成果，WiRobotics开发可穿戴步行辅助和人形机器人</li>
-          <li><span class="tag">Stanford</span> 2026 AI Index 报告发布（4月13日），全面评估AI行业发展现状</li>
+          <li><span class="tag">NVIDIA</span> Isaac GR00T N1.6：首个开放人形机器人基础模型，支持视觉-语言-动作（VLA）全身控制，与Hugging Face LeRobot库集成</li>
+          <li><span class="tag">NVIDIA</span> Cosmos世界模型和GR00T开放数据发布，加速机器人学习数据生态</li>
+          <li><span class="tag">金融AI</span> Lloyds Banking率先在英国银行业部署AI投资决策工具，引发监管机构关注</li>
+          <li><span class="tag">WiRobotics</span> 可穿戴步行辅助+人形机器人，利用辅助产品训练数据训练人形机器人</li>
+          <li><span class="tag">Stanford</span> AI Index 2026：全面评估AI行业——部署仍处早期，但对年轻开发者就业影响已可量化</li>
+          <li><span class="tag">安全</span> 企业AI系统成网络攻击新靶心，提示注入、数据投毒、模型劫持风险上升</li>
         </ul>
       </div>
 
@@ -313,10 +322,10 @@
             <tr><th>股票</th><th>参考价</th><th>备注</th></tr>
           </thead>
           <tbody>
-            <tr><td>NVDA</td><td>~$120</td><td>Mag7 Capex $7000亿利好，但中东局势短期承压</td></tr>
-            <tr><td>Cerebras</td><td>即将IPO</td><td>AI芯片挑战者重新递表，定价区间待定</td></tr>
-            <tr><td>GOOGL</td><td>~$185</td><td>TurboQuant效率突破利好云服务利润率</td></tr>
-            <tr><td>TSLA/SpaceX</td><td>非上市/整合中</td><td>xAI并入SpaceX，估值$2500亿级</td></tr>
+            <tr><td>NVDA</td><td>~$135</td><td>Physical AI布局加速，GR00T生态扩张</td></tr>
+            <tr><td>AAPL</td><td>盘后波动</td><td>CEO换帅，Ternus硬件背景或重塑AI硬件战略</td></tr>
+            <tr><td>GOOGL</td><td>~$185</td><td>Gemini生态持续推进</td></tr>
+            <tr><td>MSFT</td><td>~$480</td><td>Copilot企业渗透率提升</td></tr>
           </tbody>
         </table>
       </div>
@@ -324,11 +333,11 @@
       <div class="card">
         <h3>📊 AI行业分析</h3>
         <ul>
-          <li><strong>IPO超级周期来临</strong>：Cerebras、SpaceX（携xAI）、Anthropic、OpenAI均在筹备上市，AI领域将迎来史上最大规模IPO浪潮，预计2026年下半年集中爆发</li>
-          <li><strong>模型军备竞赛远未结束</strong>：Claude Mythos 5（10T参数）的发布证明，前沿模型竞赛仍在升级而非收敛。推理能力成为新战场</li>
-          <li><strong>基础设施投资创纪录</strong>：Alphabet、Microsoft、Amazon、Meta 2026年AI数据中心Capex合计预计达$7000亿，GPU、光模块、电力设施需求持续强劲</li>
-          <li><strong>安全与监管升温</strong>：OpenAI承认提示注入无法完全防御，Anthropic CEO赴白宫讨论Mythos模型——超大模型的安全审查正在从行业自律走向政策监管</li>
-          <li><strong>Physical AI崛起</strong>：NVIDIA在国家机器人周展示的成果表明，AI正从数字世界向物理世界（机器人、自动驾驶、工业控制）加速渗透</li>
+          <li><strong>Physical AI加速落地</strong>：NVIDIA的GR00T N1.6和Cosmos模型标志着机器人基础模型从论文走向开源生态。Hugging Face合作引入1300万AI开发者，有望快速催熟应用</li>
+          <li><strong>金融AI监管拐点</strong>：Lloyds率先让AI参与投资决策，这在严格监管的金融行业具有里程碑意义。预计UK FCA将在Q3前出台专项指引</li>
+          <li><strong>AI就业冲击量化</strong>：Stanford报告显示22-25岁开发者就业下降20%，这是首次在统计层面确认AI对初级技术岗位的替代效应</li>
+          <li><strong>AI安全升级</strong>：企业AI系统正成为攻击面——从提示注入到模型劫持，安全防护需从"附加功能"升级为"核心架构"</li>
+          <li><strong>能耗与可持续</strong>：Refiant等初创公司专注AI能耗优化，地球日之际AI行业碳足迹问题再受关注</li>
         </ul>
       </div>
     </div>
